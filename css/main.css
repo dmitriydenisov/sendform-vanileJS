@@ -1,0 +1,120 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    width: 956px;
+    height: 380px;
+    display: flex;
+    background-color: green;
+    margin: 0 auto;
+}
+.left{
+    width: 50%;
+}
+.right{
+    background-color: blue;
+    width: 50%;
+    overflow: hidden;
+    border-radius: 90px 0 0 210px;
+    position: relative;
+}
+
+.right:after{
+    position: absolute;
+    content:'';
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 100%;
+    opacity: .5;
+}
+.right:before{
+    position: absolute;
+    content:'';
+    background-color: blue;
+    top: 0px;
+    left: 60px;
+    width: 90%;
+    height: 100%;
+    opacity: .5;
+    border-radius: 90px 0 0 210px;
+}
+
+.modal{    
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(50px);
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-out;
+	opacity: 0;
+	visibility: hidden;
+}
+.modal--active{
+    visibility: visible;
+		opacity: 1;
+}
+.form-wrapper{
+    width: 410px;
+    background-color: #fff;
+    border: 2px solid yellow;
+    border-radius: 5px;
+    padding: 20px 60px;
+    display: flex;
+    flex-wrap: wrap; 
+}
+.form__title{
+    margin: 0 auto;
+    text-align: center;
+    color: blueviolet;
+    font-size: 26px;
+    font-weight: 600;
+}
+.form{
+    margin-top: 30px;
+}
+.form__item{
+    width: 250px;
+    margin-bottom: 25px;
+}
+.form__label{
+    font-weight: 500;
+    font-size: 13px;
+    color: #7EA0AD;
+}
+.form__input{
+    border: 1px solid #F4B955;
+    border-radius: 5px;
+    padding: 14px 13px;
+    outline: none;
+    width: 280px;
+    color: #432fb3;
+    font-size: 16px;
+}
+.form__input::placeholder{
+    color: rgba(126, 160, 173, .5);
+}
+.form__input--textarea {
+    height: 50px;
+    resize: vertical;
+}
+.form__button{
+    background: #F4B955;
+    border-radius: 10px;
+    width: 280px;
+    color: #fff;
+    padding: 20px 40px;
+    margin-top: 5px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
